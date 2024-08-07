@@ -19,7 +19,7 @@
     <p>Nota 1: <?php echo $nota1; ?> </p>
     <p>Nota 2: <?php echo $nota2; ?> </p>
     <p>Média: <?php echo $media; ?> </p>
-    <p>Resultado: <?php echo $media; ?> </p>
+    <p>Resultado: <?php echo $resultado; ?> </p>
 
     
 </body>
