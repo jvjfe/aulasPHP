@@ -14,6 +14,21 @@ class Boletim
 
     private $resultado;
 
+
+    //implementar código construtor
+
+    function __construct($nome,$nota1,$nota2){
+        
+        $this->nome = $nome;
+        $this->nota1 = $nota1;
+        $this->nota2 = $nota2;
+        $this->calcularMedia();
+        $this->calcularResultado();
+
+
+    }
+    
+    
     //Codificar/implementar os SETTERS (atribuir)
 
     function setNome($valor)

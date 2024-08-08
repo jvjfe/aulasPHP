@@ -9,14 +9,7 @@
 
     // Instanciamos a partir da classe Boletim
 
-    $boletim = new Boletim(); //construção do método construtor Boletim()
-    $boletim->setNome($nome); // setando valores do nome
-    $boletim->setNota1($nota1); //setando valores da nota1
-    $boletim->setNota2($nota2); // setando valores da nota2
-    $boletim->calcularMedia(); //executando o método calcularMedia
-    $boletim->calcularResultado(); //executando o método calcularResultado
-
-    // obtendo os valores dos atributos (GET) e armazenando em variáveis
+    $boletim = new Boletim($nome,$nota1,$nota2); //construção do método construtor Boletim()
     
     $media = $boletim->getMedia();
     $resultado = $boletim->getResultado();
