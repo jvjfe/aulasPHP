@@ -2,8 +2,13 @@
     $nome = $_GET["campoNome"];
     $nota1 = $_GET["campoNota1"];
     $nota2 = $_GET["campoNota2"];
-    $media = ($nota1 + $nota2) / 2;
-    $resultado = ($media>=5) ? "Aprovado" : "Reprovado";
+    //acessando arquivos do classeBoletim.php
+    require("classeBoletim.php");
+    //
+    $boletim = new Boletim(); //construção do método construtor Boletim()
+    $boletim->setNome($nome)
+    //Criar e declarar tem o mesmo significado, porém criamos variaveis e instanciamos objetos
+
 ?>
 
 <!DOCTYPE html>
