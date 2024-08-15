@@ -67,7 +67,7 @@ class Imc
     public function calcularImc()
     {
         if ($this->altura > 0) {
-            $this->imc = $this->peso / ($this->altura * $this->altura);
+            $this->imc = ($this->peso / ($this->altura * $this->altura));
         } else {
             $this->imc = 0;
         }
@@ -75,14 +75,15 @@ class Imc
 
     public function calcularResultado()
     {
-        if ($this < 18.5) {
-            $this = "Abaixo do peso";
-        } elseif ($this >= 18.5 && $this < 24.9) {
-            $this = "Peso Normal";
-        } elseif ($this >= 25 && $this <= 29.9) {
-            $this = "Sobrepeso";
+        if ($this->imc < 18.5) {
+            $this->resultado = "Abaixo do peso";
+        } elseif ($this->imc >= 18.5 && $this->imc < 24.9) {
+            $this->resultado = "Peso Normal";
+        } elseif ($this->imc >= 25 && $this->imc <= 29.9) {
+            $this->resultado = "Sobrepeso";
         } else {
-            $this = "Obesidade";
+            $this->resultado = "Obesidade";
         }
     }
 }
+?>
